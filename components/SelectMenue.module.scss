@@ -1,0 +1,60 @@
+.customSelect {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+
+  .selectLabel {
+    display: block;
+    margin-bottom: 0.5em;
+    font-size: 1em;
+  }
+
+  .selectContainer {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 0.5em;
+    cursor: pointer;
+  }
+
+  .selectValue {
+    flex-grow: 1;
+  }
+
+  .selectArrow {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 14px solid black; /* default color */
+    margin-left: 10px;
+  }
+
+  .options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: white;
+    z-index: 1000;
+    max-height: 200px;
+    overflow-y: auto;
+  }
+
+  .option {
+    padding: 0.5em;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+
+  .option:hover {
+    background: #f0f0f0;
+  }
+
+  .option.selected {
+    font-weight: bold;
+  }
+}
